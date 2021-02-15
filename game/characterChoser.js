@@ -44,10 +44,11 @@ STAY_DOWN.states.chooser = (function () {
   function checkPlayer(e){
     if(e.target.classList.contains("player1"))
       {
-        changeState(states.run)
+        setTimeout(()=>{changeState(states.run)
+        displayCH.canvas.setAttribute("class", "deactivate")}, 2000)
         
+
       }
-      displayCH.canvas.setAttribute("class", "deactivate")
   }
   function update() {
     player2.changeFrame(image.frameSetStand[0], 5);
